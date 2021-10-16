@@ -16,9 +16,10 @@ If, upon flipping the 3rd card the total value is equal to 21, the player receiv
 
 The player can keep adding cards until they reach, or pass 21.
 
-Points key (round 1):
-if Card Sum:        Points Added:          Points total:
-    19                  10                     110
-    20                  20                     120
-    21                  100                    200
-    21+                -100                    0/LoseGame
+
+Points Key (round 1) :
+if Card Sum = 19, then Points Added = 10, making Total Points 110.
+if Card Sum = 20, then Points Added = 20, making Total Points 120.
+if Card Sum = 21, then Points Added = 100, making Total Points 200.
+if Card Sum > 21, then Points Added = -100, making Total Points 0, and causing the player to lose the game. 
+
