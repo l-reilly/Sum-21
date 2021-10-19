@@ -1,0 +1,118 @@
+header {
+    font-family:"Rampart One", cursive;
+    font-size: 5em;
+    text-align: center;
+    color: #6e515e;
+}
+.points {
+    display: flex;
+    justify-content: center;
+    font-family:"Rampart One", cursive;
+    color: #A4778B;
+}
+.cards{
+    padding: 0.6em;
+    display:none;
+}
+
+
+.card-space h2 {
+    padding: 1em;
+}
+.nxt-rnd {
+    background-color: #137547;
+    font-family: "Libre Baskerville", serif;
+    height: 5rem;
+    width: 15rem;
+    font-size: large;
+    color:#FFFCFF;
+    border-color: #FFFCFF;
+}
+.losing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.losing h3 {
+    font-family: "Rampart One", cursive;
+    font-size: 5em;
+    color: #137547;
+}
+.losing button {
+    background-color: #A4778B;
+    font-family: "Libre Baskerville", serif;
+    height: 5rem;
+    width: 15rem;
+    font-size:large;
+    color: #FFFCFF;
+    border-color: #ECCBD9;
+}
+.add-card {
+    background-color: #137547;
+    font-family: "Libre Baskerville", serif;
+    height: 5rem;
+    width: 15rem;
+    font-size: large;
+    color:#FFFCFF;
+    border-color: #FFFCFF;
+}
+.Total {
+    font-family: "Rampart One", cursive;
+    color: #054A29;
+    display:none;
+}
+body {
+    background-color: #FFFCFF;
+}
+.start-game p {
+    font-family: "Libre Baskerville", serif;
+    color: #054A29;
+    font-size: 1.5em;
+}
+.start-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-start {
+    background-color: #A4778B;
+    font-family: "Libre Baskerville", serif;
+    height: 5rem;
+    width: 15rem;
+    font-size:large;
+    color: #FFFCFF;
+    border-color: #ECCBD9;
+}
+.only-table {
+    border: 1px solid #137547;
+    text-decoration: underline;
+    text-decoration-color: #137547;
+}
+.points-guide {
+    font-family: "Libre Baskerville", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #054A29;
+}
+.points-guide table{
+    font-size:22px;
+}
+.points-guide h2{
+    font-weight: 700;
+    margin-left: 8%;
+}
+#game-starts {
+    display: none;
+}
+.game-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#game-buttons {
+    display:none;
+}
+#losing {
+    display: none;
+}
