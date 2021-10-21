@@ -9,7 +9,7 @@
     </head>
     
     <header>Sum 21</header>
-    <div class="start-game" id="start-game">
+    <div class="start-game">
     <p>Instructions: Add cards to get the sum as close to 21 without going over. </p>
     <button class="btn-start">Start Game</button>
 </div>
@@ -36,21 +36,22 @@
     <img src="images/card 9.jpg" class="cards nine">
     <h3 class="cards">+</h3>
     <img src="images/card 10.jpg" class="cards ten">
+</div>
     
-    <div class="Total">
+    <div class="total" id="game-starts">
     <h3>=</h3>
-    <h2>Total : 0</h2>
+    <h2 class = "cardsTotal">Total : 0</h2>
         </div>
-        <div class="game-buttons" id="game-buttons">
-        <button class="add-card">Add card</button>
-        <button class="nxt-rnd">Next Round</button>
+        <div class="game-buttons">
+        <button class="add-card" id="game-starts">Add card</button>
+        <button class="nxt-rnd" id="nextRnd">Next Round</button>
     </div>
     <div class="losing" id="losing">
         <h3>You Lose</h2>
         <button class="new-game">New Game</button>
     
 </div>
-</div>
+
 <div class="points-guide">
     <h2>Points Guide</h2>
     <table class="only-table">
@@ -72,5 +73,7 @@
             </tr>
     </table>
 </div>
+<script src="Javafiles/game.js"></script>
+<script src="Javafiles/deck.js"></script>
     </body>
 </html>

@@ -110,9 +110,12 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-#game-buttons {
-    display:none;
+#nextRnd {
+    display: none;
 }
 #losing {
+    display: none;
+}
+#start-game {
     display: none;
 }
