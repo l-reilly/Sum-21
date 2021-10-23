@@ -10,9 +10,10 @@ function startGame() {
     startGameDiv.setAttribute('id', "start-game");
     addCardButton.removeAttribute('id');
     totalDiv.removeAttribute('id');
-    getStartingCards(cardValues);
-    getCardTotal(startingCards);
-}
+    getStartingCards();
+   document.getElementById("game-total").textContent = getCardTotal();
+} 
+
 
 startGameButton.addEventListener('click', startGame);
 
