@@ -10,6 +10,9 @@ header {
     font-family:"Rampart One", cursive;
     color: #A4778B;
 }
+.points-space {
+    display: none;
+}
 .cards{
     padding: 0.6em;
     display:none;
