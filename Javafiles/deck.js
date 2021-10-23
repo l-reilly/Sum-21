@@ -7,6 +7,7 @@ let randomCard1;
 let randomCard2;
 let startingCards = [];
 let randomCard3;
+let randomCard4;
 
 
 function getStartingCards() {

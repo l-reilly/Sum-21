@@ -17,8 +17,11 @@ header {
     padding: 0.6em;
     display:none;
 }
-
-
+.card-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .card-space h2 {
     padding: 1em;
 }
@@ -50,7 +53,7 @@ header {
     color: #FFFCFF;
     border-color: #ECCBD9;
 }
-.add-card {
+.add-card, .addFourthCard, .addFifthCard {
     background-color: #137547;
     font-family: "Libre Baskerville", serif;
     height: 5rem;
@@ -85,6 +88,8 @@ body {
     font-size:large;
     color: #FFFCFF;
     border-color: #ECCBD9;
+    margin-top: 2%;
+    margin-bottom: 4%;
 }
 .only-table {
     border: 1px solid #137547;
@@ -105,7 +110,7 @@ body {
     font-weight: 700;
     margin-left: 8%;
 }
-#game-starts {
+#game-starts, #addFourthCard, #addFifthCard, #start-game, #nextRnd, #losing{
     display: none;
 }
 .game-buttons {
@@ -113,12 +118,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-#nextRnd {
-    display: none;
-}
-#losing {
-    display: none;
-}
-#start-game {
-    display: none;
+
+.placeHolderCards {
+    height: 200px;
+
 }
