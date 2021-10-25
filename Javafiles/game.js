@@ -33,6 +33,7 @@ function addCardThree() {
     displayPoints.textContent = checkPoints();
     addCardButton.setAttribute('id', 'start-game')
     btnFourthCard.removeAttribute('id')
+    runGame();
   }
   function addCardFour() {
       randomCard4 = cardValues[Math.floor(Math.random() * cardValues.length)]
@@ -42,6 +43,7 @@ function addCardThree() {
       displayPoints.textContent = checkPoints();
       btnFourthCard.setAttribute('id', "addFourthCard")
       btnFifthCard.removeAttribute('id')
+      runGame();
 
   }
   function addCardFive() {
@@ -52,17 +54,24 @@ function addCardThree() {
       displayPoints.textContent = checkPoints();
       btnFifthCard.setAttribute('id', 'addFifthCard')
       document.querySelector('.new-game-btn').removeAttribute('id');
+      runGame();
   }
 
   function checkPoints() {
     if (total === 19) {
-        points += 10
+        nextRoundBtn.removeAttribute('id')
+        nextRoundBtn.addEventListener('click', points += 10)
     }
     else if (total === 20) {
-        points += 20
+        nextRoundBtn.removeAttribute('id')
+        nextRoundBtn.addEventListener('click', points += 20)
     }
     else if (total === 21) {
-        points += 100
+        nextRoundBtn.removeAttribute('id')
+        nextRoundBtn.addEventListener('click', points += 10)
+        addCardButton.setAttribute('id', "game-starts")
+        addCardFour.setAttribute('id', "addFourthCard")
+        addCardFive.setAttribute('id', 'addFifthCard')
     }
     else if (total > 21) {
         points -= 100
@@ -71,8 +80,9 @@ function addCardThree() {
     }
    function runGame() {
        if (points <= 0) {
-          document.querySelector('.class').removeAttribute('id');
-          document.querySelector() 
+          btnFourthCard.setAttribute('id', 'addFourthCard');
+          btnFifthCard.setAttribute('id', 'addFifthCard');
+          document.querySelector('.new-game-btn').removeAttribute('id')
        }
    }
     
