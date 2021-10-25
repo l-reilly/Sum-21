@@ -34,7 +34,7 @@ header {
     color:#FFFCFF;
     border-color: #FFFCFF;
 }
-.losing {
+.losingScreen {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +44,7 @@ header {
     font-size: 5em;
     color: #137547;
 }
-.losing button {
+.new-game-btn {
     background-color: #A4778B;
     font-family: "Libre Baskerville", serif;
     height: 5rem;
