@@ -14,7 +14,7 @@
     <button class="btn-start">Start Game</button>
 </div>
     <body>
-        <div class="points-space">
+        <div class="points-space" id="points-space">
         <h2 class = "points">Points : <a id="point-total">100</a></h2>
     </div>
     <div class="card-space">
@@ -60,7 +60,7 @@
     </div>
     <div class="losingScreen">
         <h3 class="losing" id ="losing">You Lose</h2>
-        <button class="new-game-btn" id="losing">New Game</button>
+        <button type="submit" onClick="refreshPage()" class="new-game-btn" id="losing">New Game</button>
     </div>
     
 

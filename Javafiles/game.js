@@ -19,7 +19,7 @@ function startGame() {
     addCardButton.removeAttribute('id');
     totalDiv.removeAttribute('id');
     getStartingCards();
-    document.querySelector('.points-space').removeAttribute('class');
+    document.querySelector('.points-space').removeAttribute('id');
     displayPoints.textContent = checkPoints();
     total = randomCard1 + randomCard2;
    displayTotal.textContent = total;
@@ -85,12 +85,17 @@ function addCardThree() {
           document.querySelector('.new-game-btn').removeAttribute('id')
        }
    }
+   function newGame() {
+        window.location.reload();
+    }
+
+
     
 
 
 
 startGameButton.addEventListener('click', startGame);
 addCardButton.addEventListener('click', addCardThree);
-//newGameButton.addEventListener('click', startNewGame);
 document.getElementById("addFourthCard").addEventListener('click', addCardFour);
 document.getElementById("addFifthCard").addEventListener('click', addCardFive);
+document.querySelector(".new-game-btn").addEventListener('click', newGame)

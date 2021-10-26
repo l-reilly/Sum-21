@@ -10,7 +10,7 @@ header {
     font-family:"Rampart One", cursive;
     color: #A4778B;
 }
-.points-space {
+#points-space {
     display: none;
 }
 .cards{
