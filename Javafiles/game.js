@@ -16,13 +16,18 @@ const newGameButton = document.querySelector(".new-game")
 
 function startGame() {
     startGameDiv.setAttribute('id', "start-game");
-    addCardButton.removeAttribute('id');
+    document.querySelector(".add-card").removeAttribute('id');
     totalDiv.removeAttribute('id');
     getStartingCards();
     document.querySelector('.points-space').removeAttribute('id');
     displayPoints.textContent = checkPoints();
     total = randomCard1 + randomCard2;
    displayTotal.textContent = total;
+   if (total === 19 || total === 20 || total === 21) {
+    nextRoundBtn.removeAttribute('id')
+   } else {
+       nextRoundBtn.setAttribute('id', "nextRnd")
+   }
 
 } 
 function addCardThree() {
@@ -53,25 +58,27 @@ function addCardThree() {
       displayTotal.textContent = total
       displayPoints.textContent = checkPoints();
       btnFifthCard.setAttribute('id', 'addFifthCard')
-      document.querySelector('.new-game-btn').removeAttribute('id');
       runGame();
+      if (total !== 19 && total !== 20 && total !== 21) {
+        document.querySelector('.new-game-btn').removeAttribute('id');
+      }
   }
 
   function checkPoints() {
     if (total === 19) {
         nextRoundBtn.removeAttribute('id')
-        nextRoundBtn.addEventListener('click', points += 10)
+        points += 10
     }
     else if (total === 20) {
         nextRoundBtn.removeAttribute('id')
-        nextRoundBtn.addEventListener('click', points += 20)
+        points += 20
     }
     else if (total === 21) {
         nextRoundBtn.removeAttribute('id')
-        nextRoundBtn.addEventListener('click', points += 10)
+        points += 100
         addCardButton.setAttribute('id', "game-starts")
-        addCardFour.setAttribute('id', "addFourthCard")
-        addCardFive.setAttribute('id', 'addFifthCard')
+        btnFourthCard.setAttribute('id', "addFourthCard")
+        btnFifthCard.setAttribute('id', 'addFifthCard')
     }
     else if (total > 21) {
         points -= 100
@@ -83,10 +90,31 @@ function addCardThree() {
           btnFourthCard.setAttribute('id', 'addFourthCard');
           btnFifthCard.setAttribute('id', 'addFifthCard');
           document.querySelector('.new-game-btn').removeAttribute('id')
+       } else if (points > 0 && total > 21) {
+           nextRoundBtn.removeAttribute('id')
+        addCardButton.setAttribute('id', 'game-starts')
+        btnFourthCard.setAttribute('id', 'addFourthCard')
+        btnFifthCard.setAttribute('id', 'addFifthCard')
        }
    }
    function newGame() {
         window.location.reload();
+    }
+    function nextRound () {
+        randomCard1 = 0;
+        randomCard2 = 0;
+        randomCard3 = 0;
+        randomCard4 = 0;
+        randomCard5 = 0;
+        document.getElementById("cards-one").setAttribute('src', "images/playing cards.jpeg");
+        document.getElementById("cards-two").setAttribute('src', "images/playing cards copy.jpeg");
+        document.getElementById("cards-three").setAttribute('src', "images/playing cards copy 2.jpeg");
+        document.getElementById("cards-four").setAttribute('src', "images/playing cards copy 3.jpeg");
+        document.getElementById("cards-five").setAttribute('src', "images/playing cards copy 4.jpeg");
+        btnFifthCard.setAttribute('id', 'addFifthCard')
+        btnFourthCard.setAttribute('id', 'addFourthCard')
+        document.querySelector(".nxt-rnd").setAttribute('id', "nextRnd")
+        startGame();
     }
 
 
@@ -99,3 +127,4 @@ addCardButton.addEventListener('click', addCardThree);
 document.getElementById("addFourthCard").addEventListener('click', addCardFour);
 document.getElementById("addFifthCard").addEventListener('click', addCardFive);
 document.querySelector(".new-game-btn").addEventListener('click', newGame)
+document.querySelector('.nxt-rnd').addEventListener('click', nextRound)
